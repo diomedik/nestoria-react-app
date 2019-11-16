@@ -4,29 +4,34 @@ body{
 button{
   cursor: pointer;
 }
-.app-input{
+
+ul{
+  padding-left: 0px;
+}
+.search-input{
   display: grid;
   margin: 0 auto;
   width: 20%;
 }
 
-.app-list{
+.list-items{
   display: grid;
   margin: 0 auto;
   width: 50%;
 }
-.app-list__item{
+.list-items__item{
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 5px 0px 5px 0px;
   border: 2px solid #003cff6b;
   background: white;
 }
-.app-list__item__left__img{
-  width: 50%;
+.left__img{
+  width: 90%;
+  height: 100%;
 }
 
-.app-input__button{
+.search-input__button{
   margin-top: 5px;
   background: #003cff6b;
   color: white;
@@ -35,17 +40,17 @@ button{
   font-size: 14px;
   outline: none;
 }
-.app-input{
+.search-input{
   padding-top: 15px;
 }
-.app-input__input{
+.search-input__input{
   padding: 2px;
   border: 2px solid #395acc;
   border-radius: 10px;
   outline: none;
 }
 
-.app-list__button{
+.list-items__button{
   margin: 5px auto;
   width: 20%;
   background: #003cff6b;
@@ -54,4 +59,42 @@ button{
   border-radius: 10px;
   font-size: 14px;
   outline: none;
+}
+
+.pagination{
+  display: grid;
+  margin: 15px auto;
+  width: 20%;
+  text-align: center;
+}
+
+.pagination-button{
+  margin: 5px 5px 0px 5px;
+}
+
+
+@media(max-width: 768px){
+  .list-items__button{
+    width: 50%;
+  }
+  .search-input{
+    width: 25%;
+  }
+}
+@media(max-width: 425px){
+  .pagination{
+    width: 90%;
+  }
+  .search-input{
+    width: 90%;
+  }
+  .list-items{
+    width: 90%;
+  }
+  .right{
+    font-size: 14px;
+  }
+  .list-items__button{
+    padding: 5px;
+  }
 }

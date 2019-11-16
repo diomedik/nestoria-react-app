@@ -1,23 +1,22 @@
 import React from 'react';
 import AppItem from '../AppItem/AppItem'
-import {generateUniqKey} from '../utils';
 
-const ListItem = ({ items, showMore }) => { 
+const ListItems = ({ items, showMore }) => { 
   return (
-    <div className="app-list">  
+    <div className="list-items">  
       <ul>
         {
           items.map((item) => (
             <AppItem 
-              key={generateUniqKey()}
+              key={item.title}
               item={item}
             />
           )) 
         }
       </ul>
-      <button className="app-list__button" onClick={showMore}>Show more...</button>
+      <button className="list-items__button" onClick={showMore}>Show more...</button>
     </div> 
   );
 }
 
-export default ListItem;
+export default ListItems;

@@ -2,9 +2,9 @@ import React from 'react';
 
 const AppInput = ({ searchByCity, fetchCities }) => {
     return (
-        <div className="app-input">
-            <input className="app-input__input" placeholder="City..." onChange={searchByCity}/>
-            <button className="app-input__button" onClick={fetchCities}>Input city</button>
+        <div className="search-input">
+            <input className="search-input__input" placeholder="City..." onChange={searchByCity}/>
+            <button className="search-input__button" onClick={fetchCities}>Search by city</button>
         </div>
     );
 }

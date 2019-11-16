@@ -1,17 +1,18 @@
 import React from 'react';
 
 const AppItem = ({ item }) => {
-  const {img_url, title, price_formatted} = item;
+  const { img_url, title, price_formatted, summary } = item;
   return (
-    <li className="app-list__item">
-      <div className="app-list__item__left">
-        <img className="app-list__item__left__img" src={img_url} alt="#"/>
+    <li className="list-items__item">
+      <div className="left">
+        <img className="left__img" src={img_url} alt="#"/>
       </div>
-      <div className="app-list__item__right">
+      <div className="right">
         <p>
           {title} 
-          <p>Price: {price_formatted}</p>
+          <span> {summary}</span>
         </p>
+        <p>Price: {price_formatted}</p>
       </div>
     </li>
   );
