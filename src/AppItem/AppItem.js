@@ -8,11 +8,11 @@ const AppItem = ({ item }) => {
         <img className="left__img" src={img_url} alt="#"/>
       </div>
       <div className="right">
-        <p>
+        <p className="title">
           {title} 
-          <span> {summary}</span>
         </p>
-        <p>Price: {price_formatted}</p>
+        <span>{summary}</span>
+        <p className="price">Price: {price_formatted}</p>
       </div>
     </li>
   );

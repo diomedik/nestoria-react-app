@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Preloader = ( props ) => {
+const Preloader = ({ isLoaded }) => {
     return (
-        <div className="preloader">
+        <div className="preloader" style={{display: isLoaded ? 'flex' : 'none'}}>
             <div className="preloader-item"></div>
             <div className="preloader-item"></div>
             <div className="preloader-item"></div>

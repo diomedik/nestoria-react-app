@@ -19,8 +19,7 @@
   margin: 2px;
 }
 .preloader{
-  display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 10px;
   padding-bottom: 20px;
 }
