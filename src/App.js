@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ListItems from './AppListItem/ListItem';
 import AppInput from './AppInput/AppInput';
 import Preloader from './Preloader/Preloader';
@@ -51,10 +52,12 @@ const App = props => {
         }
       })
       .catch(err => console.log(err))
+      console.log(items)
   }
    
   return (
     <div className="app">
+      <Link to="/Favorite"><button className="button-favorite">Favorite</button></Link>  
       <AppInput 
         searchByCity={searchByCity} 
         fetchCities={fetchCities}
@@ -64,6 +67,7 @@ const App = props => {
           items={items}
           showMore={showMore}
           isLoaded={isLoaded}
+          
         />
       }
       <Preloader isLoaded={isLoaded}/>       

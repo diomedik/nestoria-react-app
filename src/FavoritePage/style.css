@@ -1,0 +1,9 @@
+.favorite-page{
+    display: grid;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.favorite-page__title{
+    text-align: center;
+}
