@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM, { render, unmountComponentAtNode } from 'react-dom';
 import App from './App';
+
 import { act } from "react-dom/test-utils";
 import AppItem from './AppItem/AppItem';
 import Preloader from './Preloader/Preloader';
+import { MARK_AS_FAVORITE } from './constants/ActionTypes';
+import { markAsFavorite } from './actions/actions';
+import { Provider } from 'react-redux'
+
 
 
 it('renders without crashing', () => {
@@ -23,7 +28,19 @@ afterEach(() => {
   container.remove();
   container = null;
 })
-
+it('should create an action to add item to favorite', () => {
+  const itemHouse = {
+    img_url: 'some url',
+    title: 'Name of house',
+    price_formatted: '790000',
+    summary: ' House information'
+  }
+  const expectedAction = {
+    type: MARK_AS_FAVORITE,
+    item: itemHouse
+  }
+  expect(markAsFavorite(itemHouse)).toEqual(expectedAction)
+})
 it('renders buttons component', () => {
   act(() => {
     render(<pagesButtons />, container)
@@ -67,16 +84,18 @@ it('fetch city and render it', async () => {
     price_formatted: '790000',
     summary: ' House information'
   }
+  const store = {}
   jest.spyOn(global, 'fetch').mockImplementation(() => 
     Promise.resolve({
       json: () => Promise.resolve(fakeHouse)
     })
   );
   act(() => {
-    render(<AppItem item={fakeHouse}/>, container);
+    render(<Provider store={store}><AppItem item={fakeHouse}/></Provider>, container);
   })
   expect(container.querySelector('.title').textContent).toBe(fakeHouse.title);
   expect(container.querySelector('span').textContent).toBe(fakeHouse.summary);
   expect(container.querySelector('.price').textContent).toBe(`Price: ${fakeHouse.price_formatted}`);
   global.fetch.mockRestore();
 })
+

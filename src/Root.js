@@ -2,7 +2,7 @@ import React from 'react';
 import App from './App';
 import AboutPage from './AboutPage/AboutPage';
 import FavoritePage from './FavoritePage/FavoritePage';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Root = ({ store }) => (

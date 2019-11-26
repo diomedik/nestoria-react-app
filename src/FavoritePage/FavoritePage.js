@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './style.css';
 const FavoritePage = (props) => {
   const favItems = useSelector(state => state.favItems)
-  const uniqueItems = [...new Set(favItems)]
+  const uniqueItems = [...new Set(favItems)].filter(item => favItems.includes(item))
   return (
     <div className="favorite-page">
       <ul>
