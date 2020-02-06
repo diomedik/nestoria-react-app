@@ -1,0 +1,25 @@
+.preloader-item {
+	animation: preloader-item 0.8s linear 5000 both;
+}
+@keyframes preloader-item {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.preloader-item {
+  border-radius: 25%;
+  background: #003cff6b;
+  width: 25px;
+  height: 25px;
+  margin: 2px;
+}
+.preloader{
+  justify-content: center;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}

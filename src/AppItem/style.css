@@ -1,0 +1,26 @@
+.right__button-favorite{
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    outline: none;
+    border: none;
+    color: #9999;
+    font-size: 25px;
+}
+
+.list-items__item{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 5px 0px 5px 0px;
+    border: 2px solid #003cff6b;
+    background: white;
+}
+.left__img{
+   width: 90%;
+   height: 100%;
+}
+
+.right{
+    position: relative;
+}

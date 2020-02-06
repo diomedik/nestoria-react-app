@@ -1,22 +1,84 @@
-.App {
+body{
+  background: #f7f6f6;
+}
+button{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+ul{
+  padding-left: 0px;
+}
+
+
+.list-items{
+  display: grid;
+  margin: 0 auto;
+  width: 50%;
+}
+.button-favorite{
+  margin: 0;
+  padding: 5px 15px 5px 15px;
+  position: fixed;
+  bottom: 20px;
+  left: 50px;
+  background: #003cff6b;
+  color: white;
+  border: 2px solid #395acc;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+
+
+.list-items__button{
+  margin: 5px auto;
+  width: 20%;
+  background: #003cff6b;
+  color: white;
+  border: 2px solid #395acc;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.pagination{
+  display: grid;
+  margin: 15px auto;
+  width: 20%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.pagination-button{
+  margin: 5px 5px 0px 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #09d3ac;
+@media(max-width: 768px){
+  .list-items__button{
+    width: 50%;
+  }
+  .search-input{
+    width: 25%;
+  }
+}
+@media(max-width: 425px){
+  .pagination{
+    width: 90%;
+  }
+  .search-input{
+    width: 90%;
+  }
+  .list-items{
+    width: 90%;
+  }
+  .right{
+    font-size: 14px;
+  }
+  .list-items__button{
+    padding: 5px;
+  }
 }
